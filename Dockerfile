@@ -1,4 +1,4 @@
-FROM ghcr.io/sdr-enthusiasts/docker-baseimage:base
+FROM ghcr.io/sdr-enthusiasts/docker-baseimage:rtlsdr
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -28,8 +28,12 @@ RUN set -x && \
 
 COPY rootfs/ /
 
-ENV SRC_ADDR="" \
+ENV SRC_ADDR="127.0.0.1" \
     SRC_PORT="1234" \
     SINK_ADDR="0.0.0.0" \
     RW_SINK_PORT="7373" \
-    RO_SINK_PORT="7374"
+    RO_SINK_PORT="7374" \
+    GAIN="0" \
+    FREQ="1545600550" \
+    RATE="1536000" \
+    SERIAL="00001542"

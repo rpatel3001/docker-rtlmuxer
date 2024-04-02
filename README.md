@@ -25,8 +25,13 @@ This container is a thin wrapper around [rpatel3001/rtlmuxer](https://github.com
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `SRC_ADDR` | Address of the rtl_tcp source we are proxying. | Unset |
-| `SRC_PORT` | Port of the rtl_tcp source we are proxying. | 1234 |
-| `SINK_ADDR` | Address to bind for the proxied connections. | 0.0.0.0 |
-| `RW_SINK_PORT` | Port to bind for the read/write proxy connection. | 7373 |
-| `RO_SINK_PORT` | Port to bind for the read-only proxy connection. | 7374 |
+| `SRC_ADDR` | Address of the rtl_tcp source we are proxying. | 127.0.0.1 |
+| `SRC_PORT` | Port of the rtl_tcp source we are proxying.    | 1234 |
+| `SINK_ADDR` | Address to bind for the proxied connections.  | 0.0.0.0 |
+| `RW_SINK_PORT` | Port to bind for the read/write proxy connection.   | 7373  |
+| `RO_SINK_PORT` | Port to bind for the read-only proxy connection.    | 7374  |
+| `RTL_TCP` | Set to any value to run RTL_TCP inside the container.    | Unset |
+| `GAIN`    | Initial gain when using RTL_TCP.        | 0 |
+| `FREQ`    | Initial frequency when using RTL_TCP.   | 1545600550 |
+| `RATE`    | Initial sample rate when using RTL_TCP. | 1536000    |
+| `SERIAL`  | Serial or device index for RTL_TCP.     | 00001542   |
